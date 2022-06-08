@@ -8,6 +8,6 @@
 OpenCV 全名是Open Source Computer Vision Library(開源計算機視覺函式庫)，是一個跨平台的電腦視覺函式庫，常應用於擴增實境、臉部辨識、手勢辨識、動作辨識、運動跟蹤、物體辨識或圖像分割...等領域，能使用各種不同語言(Java、Python、C/C++...等)進行開發，由於 OpenCV 的高執行效率，甚至可用來開發 Real-time 的應用程式[3]。
 #### 二、	使用Python編寫Open CV程式
 選擇Python編寫Open CV的原因：Python為解釋型語言，因此適合快速學習，同時Python具有結構鬆散，外部可用模組較多的優點，使用Python學習Open CV對於初學者來說非常適合[4]。
-#### 參、	實驗方法與結果
+### 參、	實驗方法與結果
 一、	功能選單
 本實驗選單功能分為三種：檔案(File)、影像處理(Image Processing)、功能(Function)如圖 1所示。
