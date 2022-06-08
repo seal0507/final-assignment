@@ -11,3 +11,34 @@ OpenCV 全名是Open Source Computer Vision Library(開源計算機視覺函式�
 ### 參、	實驗方法與結果
 一、	功能選單
 本實驗選單功能分為三種：檔案(File)、影像處理(Image Processing)、功能(Function)如圖 1所示。
+```python
+window = tk.Tk()# 設定視窗標題
+window.title('影像處理程式開發平台')#設定視窗大小為 300x100，視窗（左上角）在螢幕上的座標位置為 (250, 150)
+window.geometry("800x500+250+150")
+def create_label(txt):
+    lbl_1 = tk.Label(window, text=txt, bg='skyblue', font=('Arial', 12), width=88, height=2)
+    lbl_1.grid(column=0, row=0)
+def quit():
+    window.destroy()
+create_label('資工三甲4A8G0007李致翰      影像處理程式開發平台')
+menu = tk.Menu(window)
+window.config(menu=menu)
+menu2 = tk.Menu(menu,tearoff=0)
+menu2.add_command(label='讀取/寫入影像',command=openfile)
+menu2.add_command(label='儲存檔案')
+menu2.add_command(label='離開程式',command=quit)
+menu.add_cascade(label='檔案(File)',menu=menu2)
+menu4 = tk.Menu(menu,tearoff=0)
+menu4.add_command(label='色彩空間轉換',command=RGB)
+menu4.add_command(label='影像資訊呈現',command=Histogram)
+menu4.add_command(label='幾何轉換功能',command=rotate)
+menu4.add_command(label='透視投影轉換',command=perspective)
+menu4.add_command(label='影像二值化處理',command=Binarization)
+menu.add_cascade(label='影像處理(Image Processing)',menu=menu4)
+menu3 = tk.Menu(menu,tearoff=0)
+#menu3.add_command(label='繪製影像輪廓',command=Contours)
+menu3.add_command(label='模擬色票面板',command=BGR)
+menu.add_cascade(label='功能(Function)',menu=menu3)
+text = tk.Text(window,undo=True,height=5,width=30)#執行主程式
+window.mainloop()
+```
